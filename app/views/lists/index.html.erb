@@ -1,15 +1,12 @@
 <h1>投稿一覧</h1>
 <% @meshiterros.each do |meshiterro| %>
-
-  <p>タイトル</p>
-  <span>
-    <%=link_to meshiterro.title,meshiterro_path(meshiterro.id) %>
-  </span>
-  
-  <p>画像</p>
-  <%= image_tag meshiterro.image, size: "200x200" %>
+<p>タイトル</p>
+<span>
+  <%= link_to meshiterro.title, meshiterro_path(meshiterro.id) %>
+</span>
+<p>画像</p>
+<%= image_tag meshiterro.image, size: "200x200" %>
     <% else %>
-    <%= image_tag 'no_image', size: "200x200" %>
-  
-  <% end %>
-  <% end %>
+    <%= image_tag "no_image", size: "200x200" %>
+        <% end %>
+            <% end %>

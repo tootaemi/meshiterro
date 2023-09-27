@@ -1,14 +1,11 @@
 <h2>タイトル</h2>
 <p><%= @meshiterro.title %></p>
-
 <h2>本文</h2>
 <p><%= @meshiterro.body %></p>
-
 <h2>画像</h2>
 <% if @meshiterro.image.attached? %>
-  <%= image_tag @meshiterro.image, size: "300x300" %>
-<% else %>
-  <%= image_tag 'no_image', size: "300x300" %>
-<% end %>
-
+<%= image_tag @meshiterro.image, size: "300x300" %>
+    <% else %>
+<%= image_tag 'no_image', size: "300x300" %>
+        <% end %>
 <%= link_to "編集", edit_list_path(@meshiterro.id) %>
